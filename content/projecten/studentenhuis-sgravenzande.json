@@ -1,0 +1,35 @@
+{
+  "titel": "Test - 's-Gravenzande",
+  "slug": "studentenhuis-sgravenzande",
+  "categorie": "woning",
+  "locatie": "'s-Gravenzande",
+  "adres": "Sluiswachterstraat 8, 2694CB, 's-Gravenzande",
+  "datum": "2026-5",
+  "korte_beschrijving": "Een mooi studentenhuis in 's-Gravenzande wat wij hebben opgeknapt.",
+  "beschrijving": [
+    "Heel mooi"
+  ],
+  "werkzaamheden": [
+    "Alles vernieuwd",
+    "Geschilderd"
+  ],
+  "resultaten": [
+    "Modern huis"
+  ],
+  "feiten": {
+    "type": "Woning",
+    "oppervlakte": "296 m2",
+    "oplevering": "Moi",
+    "status": "Verkocht"
+  },
+  "fotos": [
+    {
+      "src": "/assets/images/projecten/WhatsApp Image 2026-05-20 at 10.28.38 3.jpeg",
+      "alt": "zaden"
+    },
+    {
+      "src": "/assets/images/projecten/Download de Scorito (1).png",
+      "alt": "scorito"
+    }
+  ]
+}
