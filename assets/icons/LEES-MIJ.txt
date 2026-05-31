@@ -1,0 +1,5 @@
+Iconen op deze site zijn inline SVG's (rechtstreeks in de HTML/componenten),
+zodat ze scherp zijn, snel laden en met CSS van kleur kunnen veranderen.
+
+Heb je losse SVG-iconbestanden? Plaats ze hier en verwijs ernaar met bijv.:
+<img src="assets/icons/voorbeeld.svg" alt="" width="24" height="24" loading="lazy">

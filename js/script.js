@@ -189,21 +189,29 @@ function initProjects() {
 var CAT_LABELS = { woning: 'Woning', appartement: 'Appartement', bedrijfspand: 'Bedrijfspand', renovatie: 'Renovatie' };
 function labelFor(p) { return p.categorie_label || CAT_LABELS[p.categorie] || p.categorie || ''; }
 
+function coverFile(p) {
+  // De omslag is de EERSTE projectfoto; valt terug op uitgelichte_afbeelding.
+  if (p.fotos && p.fotos.length && p.fotos[0] && p.fotos[0].src) return imgFile(p.fotos[0].src);
+  return imgFile(p.uitgelichte_afbeelding);
+}
+
 function cardHTML(p) {
-  var img = imgFile(p.uitgelichte_afbeelding);
+  var img = coverFile(p);
   var url = BASE + 'projecten/' + p.slug + '.html';
   return '' +
     '<a class="project-card reveal" href="' + url + '" data-category="' + esc(p.categorie) + '">' +
       '<div class="project-card__media">' +
         '<img src="' + img + '" alt="' + esc(p.titel) + ' — ' + esc(p.locatie) + '" width="600" height="400" loading="lazy">' +
         '<span class="project-card__tag">' + esc(labelFor(p)) + '</span>' +
+        '<div class="project-card__overlay">' +
+          '<span class="loc">' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>' +
+            esc(p.locatie) +
+          '</span>' +
+          '<h3>' + esc(p.titel) + '</h3>' +
+        '</div>' +
       '</div>' +
       '<div class="project-card__body">' +
-        '<span class="project-card__loc">' +
-          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>' +
-          esc(p.locatie) +
-        '</span>' +
-        '<h3>' + esc(p.titel) + '</h3>' +
         '<p>' + esc(p.korte_beschrijving) + '</p>' +
         '<span class="project-card__more">Bekijk project <span class="arrow" aria-hidden="true">&rarr;</span></span>' +
       '</div>' +
@@ -441,13 +449,15 @@ function esc(str) {
     .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
-/* Beeldpad normaliseren: accepteert "bestand.webp", "assets/images/bestand.webp",
-   "/assets/images/bestand.webp" of een volledige URL. Alle lokale afbeeldingen
-   staan in assets/images/, dus we gebruiken de bestandsnaam. */
+/* Beeldpad voor PROJECTfoto's normaliseren. Accepteert een kale bestandsnaam
+   ("herenhuis-1.webp"), een pad ("assets/images/projecten/herenhuis-1.webp"),
+   of een volledige URL. Projectfoto's staan in assets/images/projecten/.
+   Het CMS slaat hier het pad op dat met public_folder is ingesteld; we nemen
+   altijd de bestandsnaam en zetten er de juiste projectmap voor. */
 function imgFile(v) {
   v = String(v == null ? '' : v).trim();
-  if (!v) return BASE + 'assets/images/project-placeholder.webp';
+  if (!v) return BASE + 'assets/images/projecten/project-placeholder.webp';
   if (/^https?:\/\//.test(v)) return v;
   var base = v.split('/').pop();
-  return BASE + 'assets/images/' + (base || 'project-placeholder.webp');
+  return BASE + 'assets/images/projecten/' + (base || 'project-placeholder.webp');
 }

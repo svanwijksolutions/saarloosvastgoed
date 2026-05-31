@@ -1,0 +1,54 @@
+{
+  "slug": "kantoorvilla-statenkwartier",
+  "titel": "Kantoorvilla Statenkwartier",
+  "categorie": "bedrijfspand",
+  "locatie": "Den Haag",
+  "adres": "Frederik Hendriklaan 58, 2582 BW Den Haag",
+  "datum": "2025-07",
+  "korte_beschrijving": "Een statige villa herbestemd tot representatief kantoor voor een advocatenkantoor.",
+  "beschrijving": [
+    "Deze karakteristieke villa in het Statenkwartier was toe aan een tweede leven. In opdracht en in eigen beheer transformeerden wij het pand tot een representatief kantoor, met behoud van de waardige uitstraling.",
+    "Functionaliteit en uitstraling gingen hier hand in hand: vergaderruimtes, een ontvangst en moderne werkplekken, ingepast in een klassieke schil."
+  ],
+  "werkzaamheden": [
+    "Herbestemming van woon- naar kantoorfunctie",
+    "Brandveiligheid en vluchtwegen conform regelgeving",
+    "Nieuwe data- en netwerkinfrastructuur",
+    "Klimaatinstallatie met warmtepomp",
+    "Herstel van de gevel en het schilderwerk"
+  ],
+  "resultaten": [
+    "Volledig verhuurd vóór oplevering",
+    "Energieprestatie sterk verbeterd",
+    "Monumentale uitstraling behouden"
+  ],
+  "feiten": {
+    "type": "Kantoorvilla",
+    "oppervlakte": "320 m²",
+    "oplevering": "Juli 2025",
+    "status": "Verhuurd"
+  },
+  "uitgelichte_afbeelding": "kantoorvilla-statenkwartier.webp",
+  "fotos": [
+    {
+      "src": "kantoorvilla-statenkwartier-1.webp",
+      "alt": "Projectfoto 1"
+    },
+    {
+      "src": "kantoorvilla-statenkwartier-2.webp",
+      "alt": "Projectfoto 2"
+    },
+    {
+      "src": "kantoorvilla-statenkwartier-3.webp",
+      "alt": "Projectfoto 3"
+    },
+    {
+      "src": "kantoorvilla-statenkwartier-4.webp",
+      "alt": "Projectfoto 4"
+    },
+    {
+      "src": "kantoorvilla-statenkwartier-5.webp",
+      "alt": "Projectfoto 5"
+    }
+  ]
+}

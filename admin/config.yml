@@ -1,0 +1,85 @@
+# ==========================================================================
+# Sveltia CMS — configuratie voor Saarloos Vastgoed B.V.
+# --------------------------------------------------------------------------
+# VOOR INGEBRUIKNAME (zie README §3 voor de volledige stappen):
+#  1. Vervang "GEBRUIKERSNAAM/REPONAAM" door je eigen repo (bijv. saarloosvastgoed/website).
+#  2. Zet de Cloudflare Worker op en vul de 'base_url' hieronder in, zodat je klant
+#     met één klik via "Sign in with GitHub" kan inloggen.
+# Inloggen gebeurt met een GitHub-account; de klant raakt GitHub verder nooit aan.
+# ==========================================================================
+
+backend:
+  name: github
+  repo: GEBRUIKERSNAAM/REPONAAM   # <-- AANPASSEN (owner/repo)
+  branch: main
+  # base_url: https://sveltia-cms-auth.<subdomein>.workers.dev   # <-- INVULLEN na opzet Cloudflare Worker
+  commit_messages:
+    create: 'Project toegevoegd: {{slug}}'
+    update: 'Project bijgewerkt: {{slug}}'
+    delete: 'Project verwijderd: {{slug}}'
+
+# Waar geüploade projectfoto's terechtkomen (gescheiden van bedrijfsfoto's in /site)
+media_folder: "assets/images/projecten"
+public_folder: "/assets/images/projecten"
+
+# Taal van de inhoud
+locale: nl
+
+collections:
+  - name: projecten
+    label: Projecten
+    label_singular: Project
+    description: "Voeg hier projecten toe, bewerk of verwijder ze. Na opslaan staat het project automatisch op de website."
+    folder: content/projecten
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{fields.slug}}"
+    identifier_field: titel
+    summary: "{{titel}} — {{locatie}}"
+    sortable_fields: [datum, titel, locatie]
+    fields:
+      - { label: "Titel", name: titel, widget: string, hint: "Bijv. 'Herenhuis aan de Oude Delft'" }
+      - { label: "URL-naam (slug)", name: slug, widget: string, hint: "Kleine letters en koppeltekens, bijv. 'herenhuis-oude-delft'. Dit bepaalt de paginalink en mag na publicatie niet meer wijzigen." }
+      - label: "Categorie"
+        name: categorie
+        widget: select
+        options:
+          - { label: "Woning", value: woning }
+          - { label: "Appartement", value: appartement }
+          - { label: "Bedrijfspand", value: bedrijfspand }
+          - { label: "Renovatie", value: renovatie }
+      - { label: "Locatie (plaats)", name: locatie, widget: string, hint: "Bijv. 'Delft'" }
+      - { label: "Adres", name: adres, widget: string, required: false, hint: "Straat, postcode en plaats" }
+      - { label: "Datum (jaar-maand)", name: datum, widget: string, hint: "Formaat JJJJ-MM, bijv. 2025-11. Bepaalt de volgorde (nieuwste eerst)." }
+      - { label: "Korte beschrijving", name: korte_beschrijving, widget: text, hint: "Eén of twee zinnen voor op de overzichtskaart (max. ~160 tekens)." }
+      - label: "Beschrijving (alinea's)"
+        name: beschrijving
+        widget: list
+        field: { label: "Alinea", name: alinea, widget: text }
+      - label: "Uitgevoerde werkzaamheden"
+        name: werkzaamheden
+        widget: list
+        field: { label: "Werkzaamheid", name: item, widget: string }
+      - label: "Resultaten"
+        name: resultaten
+        widget: list
+        field: { label: "Resultaat", name: item, widget: string }
+      - label: "Projectgegevens"
+        name: feiten
+        widget: object
+        fields:
+          - { label: "Type", name: type, widget: string, required: false }
+          - { label: "Oppervlakte", name: oppervlakte, widget: string, required: false }
+          - { label: "Oplevering", name: oplevering, widget: string, required: false }
+          - { label: "Status", name: status, widget: string, required: false, hint: "Bijv. Verkocht / Verhuurd / Bewoond" }
+      - label: "Foto's"
+        name: fotos
+        widget: list
+        label_singular: "Foto"
+        summary: "{{fields.alt}}"
+        hint: "Voeg één of meer foto's toe. LET OP: de EERSTE foto is automatisch de omslagfoto op de overzichtskaart (met de titel en locatie eroverheen). Sleep een foto naar boven om hem de omslag te maken."
+        fields:
+          - { label: "Afbeelding", name: src, widget: image }
+          - { label: "Omschrijving (alt-tekst)", name: alt, widget: string, hint: "Korte beschrijving van de foto, goed voor SEO en toegankelijkheid." }

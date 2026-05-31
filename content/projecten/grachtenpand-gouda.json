@@ -1,0 +1,58 @@
+{
+  "slug": "grachtenpand-gouda",
+  "titel": "Grachtenpand Gouda",
+  "categorie": "renovatie",
+  "locatie": "Gouda",
+  "adres": "Turfmarkt 18, 2801 HA Gouda",
+  "datum": "2024-09",
+  "korte_beschrijving": "Een verwaarloosd grachtenpand volledig gerenoveerd en teruggebracht in oude glorie.",
+  "beschrijving": [
+    "Dit grachtenpand in het hart van Gouda verkeerde in vervallen staat. Met een zorgvuldige, gefaseerde renovatie hebben wij het pand constructief hersteld en bewoonbaar gemaakt.",
+    "Funderingsherstel, vochtbestrijding en het herstel van de voorgevel waren bepalend voor het eindresultaat: een pand dat er weer decennia tegenaan kan."
+  ],
+  "werkzaamheden": [
+    "Funderingsherstel en vochtbestrijding",
+    "Herstel van de historische voorgevel",
+    "Volledig nieuwe indeling en installaties",
+    "Restauratie van houten kozijnen",
+    "Nieuwe keuken en badkamers"
+  ],
+  "resultaten": [
+    "Constructief volledig hersteld",
+    "Vochtproblemen definitief opgelost",
+    "Beeldbepalend pand behouden voor de stad"
+  ],
+  "feiten": {
+    "type": "Grachtenpand",
+    "oppervlakte": "210 m²",
+    "oplevering": "September 2024",
+    "status": "Verkocht"
+  },
+  "uitgelichte_afbeelding": "grachtenpand-gouda.webp",
+  "fotos": [
+    {
+      "src": "grachtenpand-gouda-1.webp",
+      "alt": "Projectfoto 1"
+    },
+    {
+      "src": "grachtenpand-gouda-2.webp",
+      "alt": "Projectfoto 2"
+    },
+    {
+      "src": "grachtenpand-gouda-3.webp",
+      "alt": "Projectfoto 3"
+    },
+    {
+      "src": "grachtenpand-gouda-4.webp",
+      "alt": "Projectfoto 4"
+    },
+    {
+      "src": "grachtenpand-gouda-5.webp",
+      "alt": "Projectfoto 5"
+    },
+    {
+      "src": "grachtenpand-gouda-6.webp",
+      "alt": "Projectfoto 6"
+    }
+  ]
+}

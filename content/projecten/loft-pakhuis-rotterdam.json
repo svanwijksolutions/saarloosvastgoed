@@ -1,0 +1,54 @@
+{
+  "slug": "loft-pakhuis-rotterdam",
+  "titel": "Loft-transformatie pakhuis",
+  "categorie": "appartement",
+  "locatie": "Rotterdam",
+  "adres": "Sint-Jobskade 12, 3024 EJ Rotterdam",
+  "datum": "2024-03",
+  "korte_beschrijving": "Een ruwe pakhuisverdieping omgevormd tot een lichte, eigentijdse loft.",
+  "beschrijving": [
+    "Op de bovenste verdieping van een oud pakhuis realiseerden wij een ruime loft. De uitdaging: industriële ruwheid behouden en tegelijk een warme, leefbare woning maken.",
+    "Grote stalen raampartijen, een vrije plattegrond en eerlijke materialen geven deze woning een uitgesproken karakter."
+  ],
+  "werkzaamheden": [
+    "Transformatie van bedrijfs- naar woonruimte",
+    "Nieuwe stalen raampartijen",
+    "Open plattegrond met vrijstaand keukenblok",
+    "Vloerverwarming en geluidsisolatie",
+    "Maatwerk badkamer"
+  ],
+  "resultaten": [
+    "Onderscheidende woning in een gewild gebied",
+    "Snel verkocht aan een enthousiaste koper",
+    "Industrieel karakter optimaal benut"
+  ],
+  "feiten": {
+    "type": "Loft-appartement",
+    "oppervlakte": "148 m²",
+    "oplevering": "Maart 2024",
+    "status": "Verkocht"
+  },
+  "uitgelichte_afbeelding": "loft-pakhuis-rotterdam.webp",
+  "fotos": [
+    {
+      "src": "loft-pakhuis-rotterdam-1.webp",
+      "alt": "Projectfoto 1"
+    },
+    {
+      "src": "loft-pakhuis-rotterdam-2.webp",
+      "alt": "Projectfoto 2"
+    },
+    {
+      "src": "loft-pakhuis-rotterdam-3.webp",
+      "alt": "Projectfoto 3"
+    },
+    {
+      "src": "loft-pakhuis-rotterdam-4.webp",
+      "alt": "Projectfoto 4"
+    },
+    {
+      "src": "loft-pakhuis-rotterdam-5.webp",
+      "alt": "Projectfoto 5"
+    }
+  ]
+}

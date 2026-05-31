@@ -1,0 +1,54 @@
+{
+  "slug": "vrijstaande-villa-rijswijk",
+  "titel": "Vrijstaande villa Rijswijk",
+  "categorie": "woning",
+  "locatie": "Rijswijk",
+  "adres": "Van Vredenburchweg 211, 2284 TC Rijswijk",
+  "datum": "2024-06",
+  "korte_beschrijving": "Een ruime vrijstaande villa aangekocht, verbouwd en met winst doorverkocht.",
+  "beschrijving": [
+    "Deze vrijstaande villa bood veel potentie, maar was gedateerd. Wij kochten het pand aan, stelden een verbouwplan op en voerden de renovatie in eigen beheer uit.",
+    "Een lichte, open leefruimte, een nieuwe keuken en een verzorgde tuin maakten het verschil bij de doorverkoop."
+  ],
+  "werkzaamheden": [
+    "Aankoop en verbouwplan",
+    "Open leefruimte en nieuwe keuken",
+    "Renovatie van twee badkamers",
+    "Verduurzaming en schilderwerk",
+    "Aanleg van de tuin"
+  ],
+  "resultaten": [
+    "Aantrekkelijke verkoopprijs gerealiseerd",
+    "Verkocht binnen een maand",
+    "Comfort en uitstraling sterk verbeterd"
+  ],
+  "feiten": {
+    "type": "Vrijstaande villa",
+    "oppervlakte": "224 m²",
+    "oplevering": "Juni 2024",
+    "status": "Verkocht"
+  },
+  "uitgelichte_afbeelding": "vrijstaande-villa-rijswijk.webp",
+  "fotos": [
+    {
+      "src": "vrijstaande-villa-rijswijk-1.webp",
+      "alt": "Projectfoto 1"
+    },
+    {
+      "src": "vrijstaande-villa-rijswijk-2.webp",
+      "alt": "Projectfoto 2"
+    },
+    {
+      "src": "vrijstaande-villa-rijswijk-3.webp",
+      "alt": "Projectfoto 3"
+    },
+    {
+      "src": "vrijstaande-villa-rijswijk-4.webp",
+      "alt": "Projectfoto 4"
+    },
+    {
+      "src": "vrijstaande-villa-rijswijk-5.webp",
+      "alt": "Projectfoto 5"
+    }
+  ]
+}

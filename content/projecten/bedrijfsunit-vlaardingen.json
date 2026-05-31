@@ -1,0 +1,50 @@
+{
+  "slug": "bedrijfsunit-vlaardingen",
+  "titel": "Bedrijfsunit Vlaardingen",
+  "categorie": "bedrijfspand",
+  "locatie": "Vlaardingen",
+  "adres": "Industrieweg 44, 3133 EE Vlaardingen",
+  "datum": "2024-11",
+  "korte_beschrijving": "Een verouderde bedrijfsunit gemoderniseerd tot flexibele bedrijfsruimte met kantoor.",
+  "beschrijving": [
+    "Deze bedrijfsunit op een goed ontsloten locatie was sterk verouderd. Wij kochten het pand aan en moderniseerden het tot een flexibel inzetbare bedrijfsruimte met representatief kantoorgedeelte.",
+    "De combinatie van werkruimte, opslag en kantoor maakt het pand geschikt voor een brede groep ondernemers."
+  ],
+  "werkzaamheden": [
+    "Aankoop en strip van de bestaande unit",
+    "Nieuwe overheaddeuren en gevelbeplating",
+    "Geïsoleerd kantoorgedeelte met pantry",
+    "LED-verlichting en krachtstroom",
+    "Bestrating en parkeerterrein"
+  ],
+  "resultaten": [
+    "Direct verhuurd na oplevering",
+    "Lagere energielasten door isolatie en LED",
+    "Flexibel indeelbare ruimte"
+  ],
+  "feiten": {
+    "type": "Bedrijfsunit",
+    "oppervlakte": "410 m²",
+    "oplevering": "November 2024",
+    "status": "Verhuurd"
+  },
+  "uitgelichte_afbeelding": "bedrijfsunit-vlaardingen.webp",
+  "fotos": [
+    {
+      "src": "bedrijfsunit-vlaardingen-1.webp",
+      "alt": "Projectfoto 1"
+    },
+    {
+      "src": "bedrijfsunit-vlaardingen-2.webp",
+      "alt": "Projectfoto 2"
+    },
+    {
+      "src": "bedrijfsunit-vlaardingen-3.webp",
+      "alt": "Projectfoto 3"
+    },
+    {
+      "src": "bedrijfsunit-vlaardingen-4.webp",
+      "alt": "Projectfoto 4"
+    }
+  ]
+}

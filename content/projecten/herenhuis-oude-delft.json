@@ -1,0 +1,59 @@
+{
+  "slug": "herenhuis-oude-delft",
+  "titel": "Herenhuis aan de Oude Delft",
+  "categorie": "woning",
+  "locatie": "Delft",
+  "adres": "Oude Delft 142, 2611 CG Delft",
+  "datum": "2025-11",
+  "korte_beschrijving": "Een monumentaal herenhuis aan de gracht, met respect voor het oorspronkelijke karakter naar deze tijd gebracht.",
+  "beschrijving": [
+    "Dit klassieke herenhuis aan de Oude Delft verkeerde bouwkundig in goede staat, maar voldeed niet meer aan de wensen van moderne bewoning. Wij hebben het pand aangekocht, een totaalplan ontwikkeld en de woning volledig laten verbouwen.",
+    "De uitdaging lag in het verenigen van twee werelden: het waardevolle, beschermde interieur behouden én een comfortabele, energiezuinige woning realiseren. Door nauwe afstemming met de gemeente en gespecialiseerde restauratiepartners is dat gelukt."
+  ],
+  "werkzaamheden": [
+    "Aankoop en bouwkundige opname van het monument",
+    "Restauratie van de originele stucplafonds en paneeldeuren",
+    "Volledig nieuwe installaties (elektra, cv, ventilatie)",
+    "Vloerverwarming en na-isolatie binnenzijde",
+    "Nieuwe keuken en twee badkamers",
+    "Herstel van de tuin en achtergevel"
+  ],
+  "resultaten": [
+    "Energielabel van G naar B zonder het aanzicht aan te tasten",
+    "Volledig verkocht binnen drie weken na oplevering",
+    "Behoud van alle monumentale details"
+  ],
+  "feiten": {
+    "type": "Herenhuis (rijksmonument)",
+    "oppervlakte": "248 m²",
+    "oplevering": "November 2025",
+    "status": "Verkocht"
+  },
+  "uitgelichte_afbeelding": "herenhuis-oude-delft.webp",
+  "fotos": [
+    {
+      "src": "herenhuis-oude-delft-1.webp",
+      "alt": "Projectfoto 1"
+    },
+    {
+      "src": "herenhuis-oude-delft-2.webp",
+      "alt": "Projectfoto 2"
+    },
+    {
+      "src": "herenhuis-oude-delft-3.webp",
+      "alt": "Projectfoto 3"
+    },
+    {
+      "src": "herenhuis-oude-delft-4.webp",
+      "alt": "Projectfoto 4"
+    },
+    {
+      "src": "herenhuis-oude-delft-5.webp",
+      "alt": "Projectfoto 5"
+    },
+    {
+      "src": "herenhuis-oude-delft-6.webp",
+      "alt": "Projectfoto 6"
+    }
+  ]
+}
