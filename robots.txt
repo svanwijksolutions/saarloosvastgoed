@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+Disallow: /privacy.html
+Disallow: /admin/
+
+# AI-zoekmachines toestaan (verplicht voor citaties in ChatGPT, Perplexity, Google AI)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.saarloosvastgoedbv.nl/sitemap.xml
