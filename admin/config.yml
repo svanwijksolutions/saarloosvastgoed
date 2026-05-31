@@ -1,18 +1,12 @@
 # ==========================================================================
 # Sveltia CMS — configuratie voor Saarloos Vastgoed B.V.
-# --------------------------------------------------------------------------
-# VOOR INGEBRUIKNAME (zie README §3 voor de volledige stappen):
-#  1. Vervang "GEBRUIKERSNAAM/REPONAAM" door je eigen repo (bijv. saarloosvastgoed/website).
-#  2. Zet de Cloudflare Worker op en vul de 'base_url' hieronder in, zodat je klant
-#     met één klik via "Sign in with GitHub" kan inloggen.
-# Inloggen gebeurt met een GitHub-account; de klant raakt GitHub verder nooit aan.
 # ==========================================================================
 
 backend:
   name: github
-  repo: GEBRUIKERSNAAM/REPONAAM   # <-- AANPASSEN (owner/repo)
+  repo: svanwijksolutions/saarloosvastgoed
   branch: main
-  # base_url: https://sveltia-cms-auth.<subdomein>.workers.dev   # <-- INVULLEN na opzet Cloudflare Worker
+  base_url: https://sveltia-cms-auth.sem-f7d.workers.dev
   commit_messages:
     create: 'Project toegevoegd: {{slug}}'
     update: 'Project bijgewerkt: {{slug}}'
