@@ -5,10 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
   <title>Saarloos Vastgoed — Beheer</title>
+  <link rel="icon" href="../assets/images/favicon.ico">
+  <style>
+    /* Nette laadweergave terwijl het portaal opstart */
+    #loading {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 1rem;
+      font-family: "Jost", "Helvetica Neue", Arial, sans-serif;
+      background: #0e1f3d; color: #f7f4ed; text-align: center; padding: 1.5rem;
+    }
+    #loading strong { font-family: Georgia, "Times New Roman", serif; font-size: 1.6rem; color: #d8bd72; letter-spacing: .02em; }
+    #loading span { font-size: .8rem; letter-spacing: .24em; text-transform: uppercase; color: rgba(247,244,237,.7); }
+    #loading small { font-size: .85rem; color: rgba(247,244,237,.55); margin-top: .5rem; }
+  </style>
 </head>
 <body>
+  <!-- Laadscherm in eigen huisstijl; verdwijnt zodra het CMS is geladen -->
+  <div id="loading">
+    <strong>Saarloos Vastgoed</strong>
+    <span>Projectbeheer</span>
+    <small>Bezig met laden…</small>
+  </div>
+
   <!-- Sveltia CMS: modern, snel en geschikt voor mobiel.
        Leest automatisch admin/config.yml in deze map. -->
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+  <script>
+    // Verberg het laadscherm zodra het CMS-venster verschijnt
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        var el = document.getElementById('loading');
+        if (el) el.style.display = 'none';
+      }, 1200);
+    });
+  </script>
 </body>
 </html>

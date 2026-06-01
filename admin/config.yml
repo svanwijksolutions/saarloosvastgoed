@@ -12,6 +12,13 @@ backend:
     update: 'Project bijgewerkt: {{slug}}'
     delete: 'Project verwijderd: {{slug}}'
 
+# Eigen logo op het inlogscherm en in de zijbalk (i.p.v. het Sveltia-logo)
+logo_url: /assets/images/favicon-180.png
+
+# Adres van de live site (knop "naar de site" in het portaal)
+site_url: https://svanwijksolutions.github.io/saarloosvastgoed/
+display_url: https://svanwijksolutions.github.io/saarloosvastgoed/
+
 # Waar geüploade projectfoto's terechtkomen (gescheiden van bedrijfsfoto's in /site)
 media_folder: "assets/images/projecten"
 public_folder: "/assets/images/projecten"
@@ -36,6 +43,15 @@ collections:
     fields:
       - { label: "Titel", name: titel, widget: string, hint: "Bijv. 'Herenhuis aan de Oude Delft'" }
       - { label: "URL-naam (slug)", name: slug, widget: string, hint: "Kleine letters en koppeltekens, bijv. 'herenhuis-oude-delft'. Dit bepaalt de paginalink en mag na publicatie niet meer wijzigen." }
+      - label: "Foto's"
+        name: fotos
+        widget: list
+        label_singular: "Foto"
+        summary: "{{fields.alt}}"
+        hint: "Voeg één of meer foto's toe. LET OP: de EERSTE foto is automatisch de omslagfoto op de overzichtskaart (met de titel en locatie eroverheen). Sleep een foto naar boven om hem de omslag te maken."
+        fields:
+          - { label: "Afbeelding", name: src, widget: image }
+          - { label: "Omschrijving (alt-tekst)", name: alt, widget: string, hint: "Korte beschrijving van de foto, goed voor SEO en toegankelijkheid." }
       - label: "Categorie"
         name: categorie
         widget: select
@@ -68,12 +84,3 @@ collections:
           - { label: "Oppervlakte", name: oppervlakte, widget: string, required: false }
           - { label: "Oplevering", name: oplevering, widget: string, required: false }
           - { label: "Status", name: status, widget: string, required: false, hint: "Bijv. Verkocht / Verhuurd / Bewoond" }
-      - label: "Foto's"
-        name: fotos
-        widget: list
-        label_singular: "Foto"
-        summary: "{{fields.alt}}"
-        hint: "Voeg één of meer foto's toe. LET OP: de EERSTE foto is automatisch de omslagfoto op de overzichtskaart (met de titel en locatie eroverheen). Sleep een foto naar boven om hem de omslag te maken."
-        fields:
-          - { label: "Afbeelding", name: src, widget: image }
-          - { label: "Omschrijving (alt-tekst)", name: alt, widget: string, hint: "Korte beschrijving van de foto, goed voor SEO en toegankelijkheid." }
