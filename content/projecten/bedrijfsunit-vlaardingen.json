@@ -1,6 +1,12 @@
 {
-  "slug": "bedrijfsunit-vlaardingen",
   "titel": "Bedrijfsunit Vlaardingen",
+  "slug": "bedrijfsunit-vlaardingen",
+  "fotos": [
+    {
+      "src": "/assets/images/projecten/2.jpg",
+      "alt": "woonkamer"
+    }
+  ],
   "categorie": "bedrijfspand",
   "locatie": "Vlaardingen",
   "adres": "Industrieweg 44, 3133 EE Vlaardingen",
@@ -28,23 +34,5 @@
     "oplevering": "November 2024",
     "status": "Verhuurd"
   },
-  "uitgelichte_afbeelding": "bedrijfsunit-vlaardingen.webp",
-  "fotos": [
-    {
-      "src": "bedrijfsunit-vlaardingen-1.webp",
-      "alt": "Projectfoto 1"
-    },
-    {
-      "src": "bedrijfsunit-vlaardingen-2.webp",
-      "alt": "Projectfoto 2"
-    },
-    {
-      "src": "bedrijfsunit-vlaardingen-3.webp",
-      "alt": "Projectfoto 3"
-    },
-    {
-      "src": "bedrijfsunit-vlaardingen-4.webp",
-      "alt": "Projectfoto 4"
-    }
-  ]
+  "uitgelichte_afbeelding": "bedrijfsunit-vlaardingen.webp"
 }
