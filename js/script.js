@@ -168,6 +168,8 @@ function initParallax() {
   var heroImg = document.querySelector('.hero__media img');
   if (!heroImg) return;
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  // Niet op telefoons/kleine schermen: daar verstoort het transformeren het soepel scrollen
+  if (window.matchMedia && window.matchMedia('(max-width: 768px)').matches) return;
 
   var ticking = false;
   function update() {
@@ -248,30 +250,39 @@ function cardHTML(p) {
 
 function initFilter(bar, grid) {
   var buttons = bar.querySelectorAll('.filter-btn');
-  buttons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      buttons.forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
-      btn.classList.add('active');
-      btn.setAttribute('aria-pressed', 'true');
+  var dropdown = document.querySelector('[data-filter-select]');
 
-      var cat = btn.getAttribute('data-filter');
-      var cards = grid.querySelectorAll('.project-card');
-      var shown = 0;
-      cards.forEach(function (card) {
-        var match = (cat === 'alle' || card.getAttribute('data-category') === cat);
-        card.classList.toggle('is-hidden', !match);
-        if (match) shown++;
-      });
-      var empty = grid.querySelector('.empty-state');
-      if (empty) empty.remove();
-      if (shown === 0) {
-        var p = document.createElement('p');
-        p.className = 'empty-state';
-        p.textContent = 'Geen projecten in deze categorie.';
-        grid.appendChild(p);
-      }
+  function applyFilter(cat) {
+    buttons.forEach(function (b) {
+      var on = b.getAttribute('data-filter') === cat;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
+    if (dropdown && dropdown.value !== cat) dropdown.value = cat;
+
+    var cards = grid.querySelectorAll('.project-card');
+    var shown = 0;
+    cards.forEach(function (card) {
+      var match = (cat === 'alle' || card.getAttribute('data-category') === cat);
+      card.classList.toggle('is-hidden', !match);
+      if (match) shown++;
+    });
+    var empty = grid.querySelector('.empty-state');
+    if (empty) empty.remove();
+    if (shown === 0) {
+      var p = document.createElement('p');
+      p.className = 'empty-state';
+      p.textContent = 'Geen projecten in deze categorie.';
+      grid.appendChild(p);
+    }
+  }
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () { applyFilter(btn.getAttribute('data-filter')); });
   });
+  if (dropdown) {
+    dropdown.addEventListener('change', function () { applyFilter(dropdown.value); });
+  }
 }
 
 function reObserveReveals(scope) {

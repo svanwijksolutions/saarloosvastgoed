@@ -50,6 +50,17 @@
           <button class="filter-btn" type="button" data-filter="renovatie" aria-pressed="false">Renovaties</button>
         </div>
 
+        <div class="filter-select-wrap">
+          <label for="filter-select" class="sr-only">Filter projecten op categorie</label>
+          <select id="filter-select" class="filter-select" data-filter-select>
+            <option value="alle">Alle projecten</option>
+            <option value="woning">Woningen</option>
+            <option value="appartement">Appartementen</option>
+            <option value="bedrijfspand">Bedrijfspanden</option>
+            <option value="renovatie">Renovaties</option>
+          </select>
+        </div>
+
         <div class="projects-grid" data-projects-grid>
           <p class="empty-state">Projecten worden geladen…</p>
         </div>
