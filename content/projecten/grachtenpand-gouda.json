@@ -1,6 +1,12 @@
 {
-  "slug": "grachtenpand-gouda",
   "titel": "Grachtenpand Gouda",
+  "slug": "grachtenpand-gouda",
+  "fotos": [
+    {
+      "src": "/assets/images/projecten/3.jpg",
+      "alt": "badkamer"
+    }
+  ],
   "categorie": "renovatie",
   "locatie": "Gouda",
   "adres": "Turfmarkt 18, 2801 HA Gouda",
@@ -28,31 +34,5 @@
     "oplevering": "September 2024",
     "status": "Verkocht"
   },
-  "uitgelichte_afbeelding": "grachtenpand-gouda.webp",
-  "fotos": [
-    {
-      "src": "grachtenpand-gouda-1.webp",
-      "alt": "Projectfoto 1"
-    },
-    {
-      "src": "grachtenpand-gouda-2.webp",
-      "alt": "Projectfoto 2"
-    },
-    {
-      "src": "grachtenpand-gouda-3.webp",
-      "alt": "Projectfoto 3"
-    },
-    {
-      "src": "grachtenpand-gouda-4.webp",
-      "alt": "Projectfoto 4"
-    },
-    {
-      "src": "grachtenpand-gouda-5.webp",
-      "alt": "Projectfoto 5"
-    },
-    {
-      "src": "grachtenpand-gouda-6.webp",
-      "alt": "Projectfoto 6"
-    }
-  ]
+  "uitgelichte_afbeelding": "grachtenpand-gouda.webp"
 }
