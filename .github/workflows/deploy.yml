@@ -1,0 +1,54 @@
+name: Bouwen en publiceren
+
+# Draait automatisch bij elke wijziging op de hoofd-branch (ook wanneer
+# Saarloos via /admin een project toevoegt of bewerkt), en kan handmatig
+# worden gestart. De projectpagina's, projecten.json en sitemap.xml worden
+# opnieuw gegenereerd en de site wordt naar GitHub Pages gepubliceerd.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v4
+
+      - name: Node.js instellen
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Projectpagina's genereren
+        run: node scripts/build-projecten.js
+
+      - name: Pages configureren
+        uses: actions/configure-pages@v5
+
+      - name: Site als artifact uploaden
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publiceren naar GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
