@@ -1,6 +1,12 @@
 {
-  "slug": "herenhuis-oude-delft",
   "titel": "Herenhuis aan de Oude Delft",
+  "slug": "herenhuis-oude-delft",
+  "fotos": [
+    {
+      "src": "/assets/images/projecten/4.jpg",
+      "alt": "woonkamer"
+    }
+  ],
   "categorie": "woning",
   "locatie": "Delft",
   "adres": "Oude Delft 142, 2611 CG Delft",
@@ -29,31 +35,5 @@
     "oplevering": "November 2025",
     "status": "Verkocht"
   },
-  "uitgelichte_afbeelding": "herenhuis-oude-delft.webp",
-  "fotos": [
-    {
-      "src": "herenhuis-oude-delft-1.webp",
-      "alt": "Projectfoto 1"
-    },
-    {
-      "src": "herenhuis-oude-delft-2.webp",
-      "alt": "Projectfoto 2"
-    },
-    {
-      "src": "herenhuis-oude-delft-3.webp",
-      "alt": "Projectfoto 3"
-    },
-    {
-      "src": "herenhuis-oude-delft-4.webp",
-      "alt": "Projectfoto 4"
-    },
-    {
-      "src": "herenhuis-oude-delft-5.webp",
-      "alt": "Projectfoto 5"
-    },
-    {
-      "src": "herenhuis-oude-delft-6.webp",
-      "alt": "Projectfoto 6"
-    }
-  ]
+  "uitgelichte_afbeelding": "herenhuis-oude-delft.webp"
 }
