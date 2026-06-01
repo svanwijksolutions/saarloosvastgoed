@@ -1,6 +1,12 @@
 {
-  "slug": "loft-pakhuis-rotterdam",
   "titel": "Loft-transformatie pakhuis",
+  "slug": "loft-pakhuis-rotterdam",
+  "fotos": [
+    {
+      "src": "/assets/images/projecten/7.jpg",
+      "alt": "woonkamer"
+    }
+  ],
   "categorie": "appartement",
   "locatie": "Rotterdam",
   "adres": "Sint-Jobskade 12, 3024 EJ Rotterdam",
@@ -28,27 +34,5 @@
     "oplevering": "Maart 2024",
     "status": "Verkocht"
   },
-  "uitgelichte_afbeelding": "loft-pakhuis-rotterdam.webp",
-  "fotos": [
-    {
-      "src": "loft-pakhuis-rotterdam-1.webp",
-      "alt": "Projectfoto 1"
-    },
-    {
-      "src": "loft-pakhuis-rotterdam-2.webp",
-      "alt": "Projectfoto 2"
-    },
-    {
-      "src": "loft-pakhuis-rotterdam-3.webp",
-      "alt": "Projectfoto 3"
-    },
-    {
-      "src": "loft-pakhuis-rotterdam-4.webp",
-      "alt": "Projectfoto 4"
-    },
-    {
-      "src": "loft-pakhuis-rotterdam-5.webp",
-      "alt": "Projectfoto 5"
-    }
-  ]
+  "uitgelichte_afbeelding": "loft-pakhuis-rotterdam.webp"
 }
