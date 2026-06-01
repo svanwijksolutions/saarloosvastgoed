@@ -1,6 +1,12 @@
 {
-  "slug": "kantoorvilla-statenkwartier",
   "titel": "Kantoorvilla Statenkwartier",
+  "slug": "kantoorvilla-statenkwartier",
+  "fotos": [
+    {
+      "src": "/assets/images/projecten/6.jpeg",
+      "alt": "gang"
+    }
+  ],
   "categorie": "bedrijfspand",
   "locatie": "Den Haag",
   "adres": "Frederik Hendriklaan 58, 2582 BW Den Haag",
@@ -28,27 +34,5 @@
     "oplevering": "Juli 2025",
     "status": "Verhuurd"
   },
-  "uitgelichte_afbeelding": "kantoorvilla-statenkwartier.webp",
-  "fotos": [
-    {
-      "src": "kantoorvilla-statenkwartier-1.webp",
-      "alt": "Projectfoto 1"
-    },
-    {
-      "src": "kantoorvilla-statenkwartier-2.webp",
-      "alt": "Projectfoto 2"
-    },
-    {
-      "src": "kantoorvilla-statenkwartier-3.webp",
-      "alt": "Projectfoto 3"
-    },
-    {
-      "src": "kantoorvilla-statenkwartier-4.webp",
-      "alt": "Projectfoto 4"
-    },
-    {
-      "src": "kantoorvilla-statenkwartier-5.webp",
-      "alt": "Projectfoto 5"
-    }
-  ]
+  "uitgelichte_afbeelding": "kantoorvilla-statenkwartier.webp"
 }
