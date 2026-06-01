@@ -1,6 +1,12 @@
 {
-  "slug": "jaren30-woning-leiden",
   "titel": "Jaren '30 woning Leiden",
+  "slug": "jaren30-woning-leiden",
+  "fotos": [
+    {
+      "src": "/assets/images/projecten/5.jpg",
+      "alt": "garage"
+    }
+  ],
   "categorie": "renovatie",
   "locatie": "Leiden",
   "adres": "Burggravenlaan 27, 2313 HM Leiden",
@@ -28,31 +34,5 @@
     "oplevering": "Mei 2025",
     "status": "Bewoond"
   },
-  "uitgelichte_afbeelding": "jaren30-woning-leiden.webp",
-  "fotos": [
-    {
-      "src": "jaren30-woning-leiden-1.webp",
-      "alt": "Projectfoto 1"
-    },
-    {
-      "src": "jaren30-woning-leiden-2.webp",
-      "alt": "Projectfoto 2"
-    },
-    {
-      "src": "jaren30-woning-leiden-3.webp",
-      "alt": "Projectfoto 3"
-    },
-    {
-      "src": "jaren30-woning-leiden-4.webp",
-      "alt": "Projectfoto 4"
-    },
-    {
-      "src": "jaren30-woning-leiden-5.webp",
-      "alt": "Projectfoto 5"
-    },
-    {
-      "src": "jaren30-woning-leiden-6.webp",
-      "alt": "Projectfoto 6"
-    }
-  ]
+  "uitgelichte_afbeelding": "jaren30-woning-leiden.webp"
 }
