@@ -147,12 +147,40 @@ function initReveal() {
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
-        entry.target.classList.add('in');
+        // Gestaffeld: elementen die samen in beeld komen, verschijnen kort na elkaar
+        var siblings = Array.prototype.slice.call(
+          entry.target.parentNode ? entry.target.parentNode.querySelectorAll(':scope > .reveal') : [entry.target]
+        );
+        var idx = siblings.indexOf(entry.target);
+        var delay = idx > 0 ? (idx % 4) * 90 : 0;
+        setTimeout(function () { entry.target.classList.add('in'); }, delay);
         io.unobserve(entry.target);
       }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   items.forEach(function (i) { io.observe(i); });
+
+  initParallax();
+}
+
+/* Subtiele parallax op de hero-afbeelding bij scrollen */
+function initParallax() {
+  var heroImg = document.querySelector('.hero__media img');
+  if (!heroImg) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var ticking = false;
+  function update() {
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    if (y < window.innerHeight) {
+      heroImg.style.transform = 'translateY(' + (y * 0.18) + 'px) scale(1.06)';
+    }
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { window.requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  update();
 }
 
 /* ----------------------------------------------------------------------

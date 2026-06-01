@@ -254,28 +254,50 @@ body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rota
   height: 100dvh;
   z-index: 110;
   display: flex; flex-direction: column; justify-content: center;
-  padding: 6rem 2rem 3rem;
+  padding: 5.5rem 2rem 2.5rem;
   transform: translateX(100%);
   visibility: hidden; opacity: 0;
   transition: transform var(--t-slow), opacity var(--t-slow), visibility var(--t-slow);
 }
 .mobile-menu.open { transform: translateX(0); visibility: visible; opacity: 1; }
 
-.mobile-menu ul { display: flex; flex-direction: column; gap: .35rem; }
+.mobile-menu ul { display: flex; flex-direction: column; gap: 0; }
 .mobile-menu a {
-  display: block; font-family: var(--font-serif);
-  font-size: 1.9rem; font-weight: 500; color: var(--cream);
-  padding: .55rem 0; min-height: 44px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: var(--font-serif);
+  font-size: 1.4rem; font-weight: 500; color: var(--cream);
+  padding: .85rem 0; min-height: 44px;
   border-bottom: 1px solid rgba(194, 162, 76, .14);
+  transition: color var(--t-med), padding-left var(--t-med);
 }
-.mobile-menu a:hover { color: var(--gold-light); padding-left: .6rem; }
-.mobile-menu__footer { margin-top: 2.5rem; }
-.mobile-menu__footer .btn { width: 100%; justify-content: center; }
+.mobile-menu a::after {
+  content: "\2192"; color: var(--gold); opacity: 0;
+  transform: translateX(-6px); transition: opacity var(--t-med), transform var(--t-med);
+}
+.mobile-menu a:hover,
+.mobile-menu a[aria-current="page"] { color: var(--gold-light); padding-left: .4rem; }
+.mobile-menu a:hover::after,
+.mobile-menu a[aria-current="page"]::after { opacity: 1; transform: translateX(0); }
+
+.mobile-menu__footer { margin-top: 2.2rem; }
+.mobile-menu__footer .btn {
+  width: 100%; justify-content: center;
+  font-size: .8rem; padding: .95rem 1.5rem; min-height: 50px;
+}
+
+/* Contactgegevens onderaan het mobiele menu — net en leesbaar */
 .mobile-menu__meta {
-  margin-top: 1.6rem; font-size: .85rem;
-  color: rgba(247, 244, 237, .6); letter-spacing: .04em;
+  margin-top: 1.8rem;
+  display: flex; flex-direction: column; gap: .7rem;
+  letter-spacing: .02em;
 }
-.mobile-menu__meta a { font-size: .85rem; color: var(--gold-light); }
+.mobile-menu__meta a {
+  display: flex; align-items: center; justify-content: flex-start; gap: .7rem;
+  font-family: var(--font-sans);
+  font-size: 1rem; color: rgba(247, 244, 237, .85);
+}
+.mobile-menu__meta a:hover { color: var(--gold-light); }
+.mobile-menu__meta svg { width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; }
 
 /* ----------------------------------------------------------------------
    6. Hero
@@ -289,12 +311,12 @@ body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rota
   overflow: hidden;
 }
 .hero__media { position: absolute; inset: 0; z-index: 0; }
-.hero__media img { width: 100%; height: 100%; object-fit: cover; }
+.hero__media img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); will-change: transform; }
 .hero__overlay {
   position: absolute; inset: 0; z-index: 1;
   background:
-    linear-gradient(180deg, rgba(10,23,46,.55) 0%, rgba(10,23,46,.78) 100%),
-    radial-gradient(120% 90% at 80% 10%, rgba(194,162,76,.18), transparent 55%);
+    linear-gradient(180deg, rgba(10,23,46,.62) 0%, rgba(10,23,46,.84) 100%),
+    radial-gradient(120% 90% at 80% 10%, rgba(194,162,76,.20), transparent 55%);
 }
 .hero__inner { position: relative; z-index: 2; max-width: 760px; padding-block: 3rem; }
 .hero h1 { color: var(--white); margin-bottom: 1.4rem; }
@@ -413,7 +435,7 @@ body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rota
    ---------------------------------------------------------------------- */
 .filter-bar {
   display: flex; flex-wrap: wrap; gap: .6rem;
-  justify-content: center; margin-bottom: 2.5rem;
+  justify-content: flex-start; margin-bottom: 2.5rem;
 }
 .filter-btn {
   font-family: var(--font-sans); font-weight: 400;
@@ -748,13 +770,14 @@ body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rota
    ---------------------------------------------------------------------- */
 .whatsapp-float {
   position: fixed; right: 1.1rem; bottom: 1.1rem; z-index: 90;
-  width: 56px; height: 56px; border-radius: 50%;
-  background: var(--gold); color: var(--navy);
+  width: 58px; height: 58px; border-radius: 50%;
+  background: #25d366; color: #fff;
   display: flex; align-items: center; justify-content: center;
-  box-shadow: var(--shadow-md); transition: transform var(--t-med), background var(--t-med);
+  box-shadow: 0 6px 20px rgba(37,211,102,.45), 0 2px 8px rgba(0,0,0,.18);
+  transition: transform var(--t-med), box-shadow var(--t-med);
 }
-.whatsapp-float:hover { transform: scale(1.07); background: var(--gold-light); }
-.whatsapp-float svg { width: 28px; height: 28px; }
+.whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 10px 28px rgba(37,211,102,.55), 0 3px 10px rgba(0,0,0,.22); }
+.whatsapp-float svg { width: 34px; height: 34px; }
 
 /* ----------------------------------------------------------------------
    20. Reveal-animaties (langzaam/elegant — stijl C)

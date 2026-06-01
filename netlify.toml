@@ -1,0 +1,28 @@
+# Netlify-configuratie voor Saarloos Vastgoed B.V.
+# De site is statisch; de projectpagina's worden vooraf gegenereerd
+# (zie .github/workflows/deploy.yml). Netlify hoeft niets te bouwen.
+
+[build]
+  publish = "."
+  command = ""
+
+# Nette URL's en beveiligingsheaders
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Caching voor statische assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# 404 terugval naar de homepage-navigatie (optioneel)
+[[redirects]]
+  from = "/home"
+  to = "/index.html"
+  status = 301
