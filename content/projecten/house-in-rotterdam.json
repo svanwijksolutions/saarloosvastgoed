@@ -1,0 +1,30 @@
+{
+  "titel": "House in Rotterdam",
+  "slug": "house-in-rotterdam",
+  "fotos": [
+    {
+      "src": "/assets/images/projecten/01bayhouseDarryll-32V3.jpeg",
+      "alt": "house"
+    }
+  ],
+  "categorie": "appartement",
+  "locatie": "Rotterdam",
+  "adres": "Rotterdamseweg 123",
+  "datum": "2026-06",
+  "korte_beschrijving": "This nice appartment in Rotterdam",
+  "beschrijving": [
+    "Very nice appartment in Rotterdam"
+  ],
+  "werkzaamheden": [
+    "Renovate the hole appartment"
+  ],
+  "resultaten": [
+    "Very nice appartment"
+  ],
+  "feiten": {
+    "type": "Appartment",
+    "oppervlakte": "80",
+    "oplevering": "?",
+    "status": "For rent"
+  }
+}
